@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@font-face {
+	font-family: Fancy;  
+	src: url(/wp-content/themes/fire-up/fonts/BERNIERDistressed-Regular.otf) format('otf'),
+		 url(/wp-content/themes/fire-up/fonts/BERNIERDistressed-Regular.ttf) format('ttf'),
+		 url(/wp-content/themes/fire-up/fonts/veneerthree-webfont.woff) format('woff');  
+	font-weight: normal;  
+}
+
+body, input, textarea, select, button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px; 
+	line-height: 1.6;
+	@include sm {
+		font-size: calc(14px + 2 * ((100vw - 480px) / 886));
+	}
+	@include xl {
+        font-size: 1.25vw;
+    }
+}
+
+@mixin fancy {font-family: 'Fancy', sans-serif; text-transform: lowercase; line-height: 1;}
+.fancy-font {@include fancy;}
+
+h1,h2,h3,h4,h5{@include fancy;}
+h1,h2,h3,h4,h5,h6,p {margin-top: 0; margin-bottom: 1em;}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+
+.alignleft {text-align: left;}
+.aligncenter {text-align: center;}
+.alignright {text-align: right;}
+
+h1, .h1 {font-size: $h1;}
+h2, .h2 {font-size: $h2;}
+h3, .h3 {font-size: $h3;}
+h4, .h4 {font-size: $h4;}
+h5, .h5 {font-size: $h5;} 
+h6, .h6 {font-size: $h6;} 
+
+
